@@ -1,0 +1,28 @@
+{
+  "name": "rollup-plugin-svg-path",
+  "version": "1.0.0",
+  "description": "A rollup plugin for converting SVG files to path",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rollup",
+    "plugin",
+    "icon",
+    "path"
+  ],
+  "author": "erkan UNLUTURK",
+  "license": "MIT",
+  "dependencies": {
+    "xml2js": "^0.4.23"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erkanunluturk/rollup-plugin-svg-path.git"
+  },
+  "bugs": {
+    "url": "https://github.com/erkanunluturk/rollup-plugin-svg-path/issues"
+  },
+  "homepage": "https://github.com/erkanunluturk/rollup-plugin-svg-path#readme"
+}
