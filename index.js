@@ -1,28 +1,27 @@
 // taken from the gestalt project
 // https://github.com/pinterest/gestalt/blob/master/packages/gestalt/rollup.config.js
 
-var fs = require('fs')
-var path = require('path')
-var xml2js = require('xml2js')
+const fs = require('fs')
+const path = require('path')
+const xml2js = require('xml2js')
 
-module.exports = function svgPath() {
+function svgPath() {
   return {
     name: 'svgPath',
     load(id) {
       if (path.extname(id) !== '.svg') {
-        return null;
+        return null
       }
-      const data = fs.readFileSync(id, 'utf-8');
       return new Promise((resolve, reject) =>
-        xml2js.parseString(data, (err, result) => {
+        xml2js.parseString(fs.readFileSync(id, 'utf-8'), (err, result) => {
           if (err) {
-            return reject(err);
+            return reject(err)
           }
-          const path = result.svg.path[0].$.d;
-          const code = `export default '${path}';`;
-          return resolve({ code });
+          return resolve(`export default '${result.svg.path[0].$.d}';`)
         })
       )
     }
   }
 }
+
+module.exports = svgPath
