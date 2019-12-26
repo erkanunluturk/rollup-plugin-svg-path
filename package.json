@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-svg-path",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A rollup plugin for converting SVG files to path",
   "main": "index.js",
   "scripts": {
