@@ -15,7 +15,7 @@
   "author": "erkan UNLUTURK",
   "license": "MIT",
   "dependencies": {
-    "xml2js": "^0.4.23"
+    "xml2js": "^0.5.0"
   },
   "repository": {
     "type": "git",
